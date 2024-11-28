@@ -1,3 +1,4 @@
+//Jenkinsfile (scripting pipeline)
 pipeline {
 
     // The agent name must match with the jenkins node name (Manage jenkins -> Nodes)
@@ -9,12 +10,12 @@ pipeline {
 
     // The tool name must match with the jenkins tools (global configuration) variable names
     tools {
-        maven 'Maven-3.9.8'
+        maven 'maven-3.9.8'
     }
 
     // Define environment variables
     environment {
-        APP_NAME = "ADI_APP"
+        APP_NAME = "JAVA_APP"
         APP_ENV  = "PRODUCTION"
     }
 

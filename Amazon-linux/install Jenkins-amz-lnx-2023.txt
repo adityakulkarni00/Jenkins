@@ -4,6 +4,9 @@
 sudo su
 yum update -y
 yum upgrade -y
+hostnamectl set-hostname master
+exit
+sudo su
 yum install -y java-17-amazon-corretto.x86_64
 java --version
 yum install -y git

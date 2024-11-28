@@ -1,8 +1,9 @@
+// jenkinsfile (Declarative Pipline)
 pipeline {
   // The agent name must match with the jenkins node name (Manage jenkins -> Nodes)
   agent {
       node {
-          label 'maven-build-server'
+          label 'maven-server'
       }
   }
 
@@ -13,7 +14,7 @@ pipeline {
 
   // Define environment variables
   environment {
-      APP_NAME = "BINDESH_APP"
+      APP_NAME = "JAVA_APP"
       APP_ENV  = "PRODUCTION"
   }
 

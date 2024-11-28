@@ -2,20 +2,20 @@ pipeline {
   // The agent name must match with the jenkins node name (Manage jenkins -> Nodes)
   agent {
       node {
-          label 'maven-build-server'
+          label 'maven-server'
       }
   }
 
   // The tool name must match with the jenkins tools (global configuration) variable names
   tools {
-      maven 'Maven-3.9.8'
+      maven 'maven-3.9.8'
   }
 
-  // Define environment variables
-  environment {
-      APP_NAME = "BINDESH_APP"
-      APP_ENV  = "PRODUCTION"
-  }
+  // Define environment variables //
+  // environment {
+  //     APP_NAME = "JAVA_APP"
+  //     APP_ENV  = "PRODUCTION"
+  // }
 
   // Cleanup the jenkins workspace before building an Application
   stages {
